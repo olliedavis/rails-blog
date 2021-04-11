@@ -1,15 +1,19 @@
 class ArticlesController < ApplicationController
+  # shows all posts | GET
   def index
     @articles = Articles.all
   end
 
-  def show
+  # shows a specific post | GET
+  def show 
     @article = Article.find(params[:id])
   end
 
+  # shows the 'new' post view | GET
   def new
   end
 
+  # creates the new post and redirects to the new post | POST
   def create
     @article = Article.new(article_params)
 
