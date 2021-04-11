@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   # shows all posts | GET
   def index
-    @articles = Articles.all
+    @articles = Article.all
   end
 
   # shows a specific post | GET
