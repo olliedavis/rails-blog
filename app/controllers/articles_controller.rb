@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
 
   # shows the 'new' post view | GET
   def new
+    @article = Article.new
   end
 
   # creates the new post and redirects to the new post | POST
