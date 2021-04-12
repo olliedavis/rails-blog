@@ -30,6 +30,19 @@ class ArticlesController < ApplicationController
     end
   end
 
+  # updates the specified post and redirects to the updated post if valid, else it renders the edit page again.
+  # using 'render' rather than redirect_to allows the new params to be passed back, rather than erasing the fields
+  # HTML PATCH REQUEST
+  def update
+    @article = Article.find(params[:id])
+
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def article_params
