@@ -14,6 +14,10 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   # creates the new post and redirects to the new post | POST
   def create
     @article = Article.new(article_params)
