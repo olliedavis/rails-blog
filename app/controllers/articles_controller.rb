@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  http_basic_authenticate_with name: 'Ollie', password: 'supersecretplaintextpw', except: [:index, :show]
+
   # shows all posts | HTML GET REQUEST
   def index
     @articles = Article.all
