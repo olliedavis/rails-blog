@@ -1,2 +1,7 @@
-<h1>Welcome</h1>
-<%= link_to 'My Blog', controller: 'articles' %>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Welcome</h1>
+    <p>This is my first Rails Page</p>
+    <%= button_to 'My Blog', articles_url, :class => "btn btn-primary btn-lg", :method => :get %>
+  </div>
+</div>
