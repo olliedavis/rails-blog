@@ -4,14 +4,24 @@
   text-align: center;
   padding-bottom: 5%;
 }
+#article-body{
+  padding: 10px;
+}
 
-.form-horizontal{
+#add-comment-header{
+  padding: 10px 0 10px;
+}
+
+#article-form{
   margin: 0 10vw 0 20vw;
+}
+
+#comment-section-body{
+  padding-left: 20px;
 }
 
 .col-xs-offset-2{
   margin-left: 32.5vw;
   width: 34.5vw;
   padding: 0;
-
 }
