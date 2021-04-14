@@ -1,5 +1,5 @@
 <h2 align="center"><%= @article.title %></h2>
-<div class="well col-xs-8 col-xs-offset-2">
+<div id="article-body" class="well col-xs-8 col-xs-offset-2">
   <%= simple_format(@article.text) %>
 
 <%= link_to "Edit", edit_article_path(@article), class: "btn btn-xs btn-primary" %> |
@@ -10,7 +10,7 @@
 
 </div>
 
-<div class="well col-xs-8 col-xs-offset-2">
+<div id="comment-section-body" class="well col-xs-8 col-xs-offset-2">
 
 <% unless @article.comments.empty?%>
   <h2>Comments</h2>
