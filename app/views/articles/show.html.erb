@@ -1,15 +1,23 @@
 <h2 align="center"><%= @article.title %></h2>
 <div class="well col-xs-8 col-xs-offset-2">
-  <%= @article.text %>
-</p>
+  <%= simple_format(@article.text) %>
+
+<%= link_to "Edit", edit_article_path(@article), class: "btn btn-xs btn-primary" %> |
+<%= link_to 'Back', articles_path, class: "btn btn-xs btn-success" %> |
+<%= link_to 'Destroy', article_path(@article), 
+              method: :delete,
+                data:  { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
+
+</div>
+
+<div class="well col-xs-8 col-xs-offset-2">
 
 <% unless @article.comments.empty?%>
   <h2>Comments</h2>
   <%= render @article.comments %>
 <% end %>
 
-<h2> Add a comment: </h2>
+<h2 id="add-comment-header"> Add a comment: </h2>
 <%= render 'comments/form' %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+</div>
