@@ -1,15 +1,7 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Text:</strong>
+<h2 align="center"><%= @article.title %></h2>
+<div class="well col-xs-8 col-xs-offset-2">
   <%= @article.text %>
 </p>
-
-<h2>Comments</h2>
-<%= render @article.comments %>
 
 <h2> Add a comment: </h2>
 <%= render 'comments/form' %>
