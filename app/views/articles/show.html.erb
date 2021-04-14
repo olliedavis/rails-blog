@@ -3,6 +3,11 @@
   <%= @article.text %>
 </p>
 
+<% unless @article.comments.empty?%>
+  <h2>Comments</h2>
+  <%= render @article.comments %>
+<% end %>
+
 <h2> Add a comment: </h2>
 <%= render 'comments/form' %>
 
