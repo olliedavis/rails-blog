@@ -18,10 +18,26 @@
 
 #comment-section-body{
   padding-left: 20px;
+  padding-right: 20px;
 }
 
 .col-xs-offset-2{
   margin-left: 32.5vw;
   width: 34.5vw;
   padding: 0;
+}
+
+
+#edit-article-header{
+  text-align: center;
+}
+
+#comment-form-name, #comment-form-body {
+  width: 100%;
+}
+
+#comment-form-submit{
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }
